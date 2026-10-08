@@ -1,0 +1,515 @@
+{
+  "engine": "Tencent Hunyuan Hy-MT2",
+  "version": "2.0-compact",
+  "architecture": "HunYuanDenseV1-1.8B / MoE-30B-A3B",
+  "totalLanguages": 33,
+  "languages": [
+    {
+      "code": "ar",
+      "englishName": "Arabic",
+      "nativeName": "العربية",
+      "direction": "RTL",
+      "script": "Arabic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "en",
+      "englishName": "English",
+      "nativeName": "English",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "zh",
+      "englishName": "Chinese (Simplified)",
+      "nativeName": "简体中文",
+      "direction": "LTR",
+      "script": "Hanzi",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "es",
+      "englishName": "Spanish",
+      "nativeName": "Español",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "fr",
+      "englishName": "French",
+      "nativeName": "Français",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "de",
+      "englishName": "German",
+      "nativeName": "Deutsch",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "ru",
+      "englishName": "Russian",
+      "nativeName": "Русский",
+      "direction": "LTR",
+      "script": "Cyrillic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "ja",
+      "englishName": "Japanese",
+      "nativeName": "日本語",
+      "direction": "LTR",
+      "script": "Kanji / Kana",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "ko",
+      "englishName": "Korean",
+      "nativeName": "한국어",
+      "direction": "LTR",
+      "script": "Hangul",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "fa",
+      "englishName": "Persian (Farsi)",
+      "nativeName": "فارسی",
+      "direction": "RTL",
+      "script": "Perso-Arabic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "ur",
+      "englishName": "Urdu",
+      "nativeName": "اردو",
+      "direction": "RTL",
+      "script": "Perso-Arabic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "he",
+      "englishName": "Hebrew",
+      "nativeName": "עברית",
+      "direction": "RTL",
+      "script": "Hebrew",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "it",
+      "englishName": "Italian",
+      "nativeName": "Italiano",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "pt",
+      "englishName": "Portuguese",
+      "nativeName": "Português",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "tr",
+      "englishName": "Turkish",
+      "nativeName": "Türkçe",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "hi",
+      "englishName": "Hindi",
+      "nativeName": "हिन्दी",
+      "direction": "LTR",
+      "script": "Devanagari",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "vi",
+      "englishName": "Vietnamese",
+      "nativeName": "Tiếng Việt",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "th",
+      "englishName": "Thai",
+      "nativeName": "ไทย",
+      "direction": "LTR",
+      "script": "Thai",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "id",
+      "englishName": "Indonesian",
+      "nativeName": "Bahasa Indonesia",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "ms",
+      "englishName": "Malay",
+      "nativeName": "Bahasa Melayu",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "nl",
+      "englishName": "Dutch",
+      "nativeName": "Nederlands",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "pl",
+      "englishName": "Polish",
+      "nativeName": "Polski",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male",
+        "Female"
+      ]
+    },
+    {
+      "code": "uk",
+      "englishName": "Ukrainian",
+      "nativeName": "Українська",
+      "direction": "LTR",
+      "script": "Cyrillic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "cs",
+      "englishName": "Czech",
+      "nativeName": "Čeština",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "sv",
+      "englishName": "Swedish",
+      "nativeName": "Svenska",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "el",
+      "englishName": "Greek",
+      "nativeName": "Ελληνικά",
+      "direction": "LTR",
+      "script": "Greek",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "hu",
+      "englishName": "Hungarian",
+      "nativeName": "Magyar",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "ro",
+      "englishName": "Romanian",
+      "nativeName": "Română",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "da",
+      "englishName": "Danish",
+      "nativeName": "Dansk",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "fi",
+      "englishName": "Finnish",
+      "nativeName": "Suomi",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "no",
+      "englishName": "Norwegian",
+      "nativeName": "Norsk",
+      "direction": "LTR",
+      "script": "Latin",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": true,
+      "ttsSupported": true,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": [
+        "Male"
+      ]
+    },
+    {
+      "code": "bo",
+      "englishName": "Tibetan",
+      "nativeName": "བོད་སྐད་",
+      "direction": "LTR",
+      "script": "Tibetan",
+      "translationSupported": true,
+      "ocrSupported": false,
+      "asrSupported": false,
+      "ttsSupported": false,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": []
+    },
+    {
+      "code": "ug",
+      "englishName": "Uyghur",
+      "nativeName": "ئۇيغۇرچە",
+      "direction": "RTL",
+      "script": "Uyghur Arabic",
+      "translationSupported": true,
+      "ocrSupported": true,
+      "asrSupported": false,
+      "ttsSupported": false,
+      "defaultVoiceGender": "Male",
+      "availableVoiceGenders": []
+    }
+  ]
+}

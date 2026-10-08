@@ -1,0 +1,96 @@
+name: Remote Build & Release APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build & Package Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Generate Release Signing Keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore release.keystore \
+            -alias lot_release_key \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass lot_production_secure_pass_2026 \
+            -keypass lot_production_secure_pass_2026 \
+            -dname "CN=LOT, OU=Mobile, O=Albraa, L=Engineering, S=Local, C=SA"
+
+      - name: Run Unit Tests
+        run: gradle test --stacktrace
+
+      - name: Assemble Release APK
+        env:
+          LOT_KEYSTORE_PASSWORD: lot_production_secure_pass_2026
+          LOT_KEY_ALIAS: lot_release_key
+          LOT_KEY_PASSWORD: lot_production_secure_pass_2026
+        run: gradle assembleRelease --stacktrace
+
+      - name: Package & Generate SHA-256 Checksum
+        run: |
+          APK_FILE=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          if [ -z "$APK_FILE" ]; then
+            echo "Error: No APK file found!"
+            exit 1
+          fi
+          echo "Found APK at $APK_FILE"
+          cp "$APK_FILE" lot-v1.0.0-release.apk
+          sha256sum lot-v1.0.0-release.apk > checksums.txt
+          echo "=== SHA-256 CHECKSUM ==="
+          cat checksums.txt
+          echo "APK Size: $(du -h lot-v1.0.0-release.apk | cut -f1)"
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: lot-v1.0.0-release-apk
+          path: |
+            lot-v1.0.0-release.apk
+            checksums.txt
+
+      - name: Publish GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete v1.0.0 --yes || true
+          gh release create v1.0.0 lot-v1.0.0-release.apk checksums.txt \
+            --title "LOT v1.0.0 — Production Release" \
+            --notes "### LOT — Locally Offline Translation (v1.0.0)
+
+          **100% Offline, On-Device Neural Translation Instrument**
+          
+          #### Key Highlights:
+          - **Tencent Hunyuan Hy-MT2 1.8B** integration for 33 mutual languages.
+          - **Visual Text Replacement**: In-place OCR detection, background inpainting, and typesetting.
+          - **Continuous Speech Translation**: Microphone recording with audio waveform visualizer and offline TTS.
+          - **First-Class RTL & BiDi Support**: Arabic, Hebrew, Persian, Urdu.
+          - **Default Voice**: Male voice (with Female option in Settings).
+          - **100% Remote Build**: Built on GitHub Actions CI/CD.
+          
+          #### Verification:
+          - Checksum: \`$(cat checksums.txt)\`
+          "

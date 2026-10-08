@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LOT</string>
+    <string name="app_full_name">Locally Offline Translation</string>
+    <string name="app_tagline">Precision On-Device Translation Instrument</string>
+
+    <!-- Navigation / Modes -->
+    <string name="mode_text">Text</string>
+    <string name="mode_image">Image</string>
+    <string name="mode_speech">Speech</string>
+    <string name="mode_history">History</string>
+    <string name="mode_settings">Settings</string>
+
+    <!-- Status Bar -->
+    <string name="status_offline_active">OFFLINE ENGINE // ACTIVE</string>
+    <string name="status_model_ready">HY-MT2 1.8B READY</string>
+    <string name="status_privacy_guaranteed">100% LOCAL PROCESSING</string>
+
+    <!-- Language Selector -->
+    <string name="source_language">Source Language</string>
+    <string name="target_language">Target Language</string>
+    <string name="swap_languages">Swap Languages</string>
+    <string name="search_languages">Search languages or scripts…</string>
+    <string name="recent_languages">Recent</string>
+    <string name="all_languages">All Supported Languages</string>
+    <string name="auto_detect">Auto Detect</string>
+
+    <!-- Text Mode -->
+    <string name="input_hint">Enter or paste text to translate locally…</string>
+    <string name="translation_output_hint">Translation appears here directly…</string>
+    <string name="action_translate">Translate</string>
+    <string name="action_translating">Translating…</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_share">Share</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_unfavorite">Unfavorite</string>
+    <string name="action_speak_source">Speak Source</string>
+    <string name="action_speak_target">Speak Translation</string>
+    <string name="action_retry">Retry</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+
+    <!-- Image Mode -->
+    <string name="image_select_photo">Select Image</string>
+    <string name="image_take_photo">Capture Photo</string>
+    <string name="image_processing">Detecting text &amp; reconstructing…</string>
+    <string name="image_view_original">Original</string>
+    <string name="image_view_translated">Translated</string>
+    <string name="image_view_split">Comparison Slider</string>
+    <string name="image_view_side_by_side">Side by Side</string>
+    <string name="image_extracted_regions">Extracted Text Regions</string>
+    <string name="image_save_result">Save Image</string>
+    <string name="image_share_result">Share Image</string>
+    <string name="image_no_text_detected">No text regions detected in image.</string>
+    <string name="image_saved_success">Translated image saved to gallery.</string>
+    <string name="image_retranslate_region">Retranslate Region</string>
+
+    <!-- Speech Mode -->
+    <string name="speech_tap_to_record">Tap to Start Recording</string>
+    <string name="speech_recording">Recording speech continuously…</string>
+    <string name="speech_tap_to_end">End Recording</string>
+    <string name="speech_cancel">Cancel</string>
+    <string name="speech_transcribing">Processing speech offline…</string>
+    <string name="speech_source_transcript">Source Transcript</string>
+    <string name="speech_translation_result">Translated Speech</string>
+    <string name="speech_permission_required">Microphone permission is required for speech translation.</string>
+    <string name="speech_permission_grant">Grant Permission</string>
+
+    <!-- History Mode -->
+    <string name="history_title">Translation Archive</string>
+    <string name="history_empty">No translation records yet.</string>
+    <string name="history_filter_all">All</string>
+    <string name="history_filter_favorites">Favorites</string>
+    <string name="history_search_hint">Search history…</string>
+    <string name="history_clear_all">Clear History</string>
+    <string name="history_clear_confirm">Are you sure you want to delete all translation history?</string>
+
+    <!-- Settings Mode -->
+    <string name="settings_title">Console Settings</string>
+    <string name="settings_model_header">Neural Translation Engine</string>
+    <string name="settings_model_name">Tencent Hunyuan Hy-MT2</string>
+    <string name="settings_model_variant">1.8B On-Device Quantized</string>
+    <string name="settings_model_status">Installed &amp; Verified</string>
+    <string name="settings_model_languages">33 Mutual Languages Supported</string>
+    
+    <string name="settings_voice_header">Offline Speech Playback (TTS)</string>
+    <string name="settings_voice_default">Default Voice</string>
+    <string name="settings_voice_male">Male (Default)</string>
+    <string name="settings_voice_female">Female</string>
+    <string name="settings_voice_speed">Playback Speed</string>
+    
+    <string name="settings_app_language">Interface Language</string>
+    <string name="settings_theme">Display Theme</string>
+    <string name="settings_theme_dark">Instrument Dark</string>
+    <string name="settings_theme_light">Pure Light</string>
+    <string name="settings_theme_system">System Default</string>
+
+    <string name="settings_privacy_header">Privacy &amp; Data Security</string>
+    <string name="settings_privacy_status">100% Offline: Zero Cloud Connections, Zero Telemetry</string>
+    <string name="settings_clear_cache">Clear Cached Images &amp; Audio</string>
+    <string name="cache_cleared">Temporary files cleared.</string>
+
+    <string name="settings_about_header">About LOT</string>
+    <string name="settings_version">Version 1.0.0 (Build 2026.10)</string>
+    <string name="settings_licenses">Open Source Licenses &amp; Attributions</string>
+    <string name="settings_developer">Built by Albraa</string>
+</resources>

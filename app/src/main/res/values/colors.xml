@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lot_background">#0B0F19</color>
+    <color name="lot_surface">#131B2E</color>
+    <color name="lot_surface_variant">#1E293B</color>
+    <color name="lot_primary">#2563EB</color>
+    <color name="lot_primary_bright">#38BDF8</color>
+    <color name="lot_accent">#0EA5E9</color>
+    <color name="lot_on_surface">#F8FAFC</color>
+    <color name="lot_on_surface_muted">#94A3B8</color>
+</resources>
