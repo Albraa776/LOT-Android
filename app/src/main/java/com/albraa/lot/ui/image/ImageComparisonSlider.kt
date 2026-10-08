@@ -90,15 +90,15 @@ fun ImageComparisonSlider(
         // Center circular thumb indicator
         Box(
             modifier = Modifier
+                .align(Alignment.CenterStart)
                 .offset {
                     IntOffset(
                         (containerWidth * splitFraction - 16.dp.toPx()).roundToInt(),
-                        (this.size.height / 2 - 16.dp.toPx()).roundToInt()
+                        0
                     )
                 }
                 .size(32.dp)
                 .background(ConsoleBackground, CircleShape)
-                .align(Alignment.CenterStart)
         ) {
             Icon(
                 imageVector = Icons.Default.SwapHoriz,
